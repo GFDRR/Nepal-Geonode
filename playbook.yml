@@ -1,2 +1,9 @@
----
-This is where the ansible playbook goes
+- hosts: production
+  remote_user: geonode
+  vars:
+    app_name: nepal_geonode
+    github_user: gfdrr
+    server_name: 0.0.0.0
+    deploy_user: geondoe
+  roles:
+     - { role: ortelius.geonode }
