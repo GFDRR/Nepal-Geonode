@@ -23,7 +23,7 @@ Setup instructions (need refining):
        $ psql
          postgres=#
          postgres=# \password postgres
-         postgres=# CREATE USER nepalnode WITH PASSWORD 'nepalnode'; # should be same as password in setting.py
+         postgres=# CREATE USER nepalnode WITH PASSWORD 'nepalnode';
          postgres=# GRANT ALL PRIVILEGES ON DATABASE "nepalnode" to nepalnode;
          postgres=# GRANT ALL PRIVILEGES ON DATABASE "nepalnode-imports" to nepalnode;
          postgres=# \q
