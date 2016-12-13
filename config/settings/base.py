@@ -14,6 +14,8 @@ STATICFILES_DIRS.append(
 
 TEMPLATES[0]['DIRS'] = [os.path.join(APPS_DIR, "templates"), os.path.join(PROJECT_ROOT, "templates")]
 
+ROOT_URLCONF = 'config.urls'
+
 # OSGEO_IMPORTER = 'osgeo_importer'
 
 # IMPORT_HANDLERS = [
