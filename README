@@ -1,20 +1,20 @@
-This README file will be refined using proper markdown syntax soon...
-
-GeoNode for Nepal
+================
+ GeoNode for Nepal
+================
 
 Setup instructions (needs refining):
+===============
 
 1. Create a new virtualenv with python2
 2. Clone this repo
-3. Set environment variables in the postactivate script
-cd $VIRTUAL_ENV/bin/
-vim postactivate
+3. Set environment variables in the postactivate script::
+    cd $VIRTUAL_ENV/bin/
+    vim postactivate
     export DJANGO_SETTINGS_MODULE='config.settings.local'
-    export ROOT_URLCONF='config.urls'
-vim postdeactivate
-    Unset DJANGO_SETTINGS_MODULE
-    Unset ROOT_URLCONF
-4. pip install -r requirements/local.txt
+
+    vim postdeactivate
+    unset DJANGO_SETTINGS_MODULE
+4. pip install -r requirements/local.txt::
        $ su postgres
        $ createdb nepalnode
        $ createdb nepalnode-imports
