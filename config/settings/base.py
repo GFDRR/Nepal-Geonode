@@ -21,6 +21,8 @@ LANGUAGES = (
     ('ne', 'Nepali'),
 )
 
+TIME_ZONE = "Asia/Kathmandu"
+
 # OSGEO_IMPORTER = 'osgeo_importer'
 
 # IMPORT_HANDLERS = [
