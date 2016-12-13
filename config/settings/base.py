@@ -1,6 +1,9 @@
 # import environ
 from geonode.settings import *
 
+SITENAME = 'nepal_geonode'
+
+# Used for relative settings elsewhere.
 ROOT_DIR = os.path.abspath(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 APPS_DIR = os.path.join(ROOT_DIR, "nepal_geonode")
 
