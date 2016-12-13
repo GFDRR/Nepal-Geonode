@@ -16,6 +16,11 @@ TEMPLATES[0]['DIRS'] = [os.path.join(APPS_DIR, "templates"), os.path.join(PROJEC
 
 ROOT_URLCONF = 'config.urls'
 
+LANGUAGES = (
+    ('en', 'English'),
+    ('ne', 'Nepali'),
+)
+
 # OSGEO_IMPORTER = 'osgeo_importer'
 
 # IMPORT_HANDLERS = [
