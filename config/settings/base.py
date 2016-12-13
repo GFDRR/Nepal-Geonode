@@ -7,6 +7,13 @@ SITENAME = 'nepal_geonode'
 ROOT_DIR = os.path.abspath(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 APPS_DIR = os.path.join(ROOT_DIR, "nepal_geonode")
 
+# Additional directories which hold static files
+STATICFILES_DIRS.append(
+    os.path.join(APPS_DIR, "static"),
+)
+
+TEMPLATES[0]['DIRS'] = [os.path.join(APPS_DIR, "templates"), os.path.join(PROJECT_ROOT, "templates")]
+
 # OSGEO_IMPORTER = 'osgeo_importer'
 
 # IMPORT_HANDLERS = [
@@ -33,31 +40,6 @@ APPS_DIR = os.path.join(ROOT_DIR, "nepal_geonode")
 
 # MEDIA_ROOT =
 # STATIC_ROOT =
-# STATICFILES_DIRS =
-
-# TEMPLATES = [
-#     {
-#         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-#         'DIRS': [os.path.join(PROJECT_ROOT, "templates")],
-#         'APP_DIRS': True,
-#         'OPTIONS': {
-#             'context_processors': [
-#                 'django.contrib.auth.context_processors.auth',
-#                 'django.core.context_processors.debug',
-#                 'django.core.context_processors.i18n',
-#                 'django.core.context_processors.tz',
-#                 'django.core.context_processors.media',
-#                 'django.core.context_processors.static',
-#                 'django.core.context_processors.request',
-#                 'django.contrib.messages.context_processors.messages',
-#                 'account.context_processors.account',
-#                 'geonode.context_processors.resource_urls',
-#                 'geonode.geoserver.context_processors.geoserver_urls',
-#             ],
-#             'debug': DEBUG,
-#         },
-#     },
-# ]
 
 # OGC_SERVER = {
 #     'default': {
