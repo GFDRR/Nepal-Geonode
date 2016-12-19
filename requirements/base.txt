@@ -1,2 +1,2 @@
-# geonode>=2.5.5
+-e git://github.com/geonode/geonode.git#egg=geonode
 pygdal==2.1.0.3 # set correct version
