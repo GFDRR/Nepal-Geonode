@@ -1,10 +1,13 @@
+---
 - hosts: production
-  remote_user: geonode
+  remote_user: geosolutions
   vars:
-    app_name: Nepal-GeoNode
-    github_user: gfdrr
-    server_name: 0.0.0.0
-    deploy_user: geonode
+    app_name: nepal_geonode
+    github_user: GFDRR
+    code_repository: "https://github.com/GFDRR/Nepal-Geonode.git"
+    server_name: 149.56.94.154
+    deploy_user: geosolutions
+    geoserver_url: http://build.geonode.org/geoserver/latest/geoserver-2.9.x-oauth2.war
+    main_module: "config.settings"
   roles:
-     - { role: geonode.geonode }
- }
+     - { role: ortelius.geonode }
