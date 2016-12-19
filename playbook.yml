@@ -1,9 +1,10 @@
 - hosts: production
   remote_user: geonode
   vars:
-    app_name: nepal_geonode
+    app_name: Nepal-GeoNode
     github_user: gfdrr
     server_name: 0.0.0.0
-    deploy_user: geondoe
+    deploy_user: geonode
   roles:
-     - { role: ortelius.geonode }
+     - { role: geonode.geonode }
+ }
