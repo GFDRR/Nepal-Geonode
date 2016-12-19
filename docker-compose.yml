@@ -11,24 +11,35 @@ services:
      image: rabbitmq
 
   django:
-    image: geonode/django
+    build: .
     links:
       - postgres
       - elasticsearch
       - rabbitmq
-    command: django-admin.py runserver 0.0.0.0:8000 --settings=geonode.settings
-    env_file:
-      - ./scripts/docker/env/production/django.env
+    command: django-admin.py runserver 0.0.0.0:8000 --settings=config.settings.production
+    environment:
+      - DATABASE_URL=postgres://postgres:postgres@postgres:5432/postgres
+      - BROKER_URL=amqp://guest:guest@rabbitmq:5672/
+      - DJANGO_SETTINGS_MODULE=config.settings.production
+      - ALLOWED_HOSTS=['django',]
+      - GEOSERVER_PUBLIC_LOCATION=http://localhost/geoserver/
+      - GEOSERVER_LOCATION=http://geoserver:8080/geoserver/
+
 
   celery:
-    image: geonode/django
+    build: .
     links:
       - rabbitmq
       - postgres
       - elasticsearch
-    command: celery worker --app=geonode.celery_app:app -B -l INFO
-    env_file:
-      - ./scripts/docker/env/production/django.env
+    command: celery worker --app=config.celeryapp:app -B -l INFO
+    environment:
+      - DATABASE_URL=postgres://postgres:postgres@postgres:5432/postgres
+      - BROKER_URL=amqp://guest:guest@rabbitmq:5672/
+      - GEOSERVER_BASE_URL="http://geoserver:8080/geoserver/"
+      - DJANGO_SETTINGS_MODULE=config.settings.production
+      - ALLOWED_HOSTS=['django',]
+      - C_FORCE_ROOT=1
 
   geoserver:
     image: geonode/geoserver
@@ -38,17 +49,14 @@ services:
       - "8080"
     volumes_from:
       - data_dir_conf
-    env_file:
-      - ./scripts/docker/env/production/geoserver.env
 
   nginx:
-    image: geonode/nginx:geoserver
+    image: terranodo/nginx:geoserver
     links:
       - django
       - geoserver
     ports:
-      - "8000:80"
-
+      - "80:80"
   data_dir_conf:
     image: geonode/geoserver_data
     container_name: geoserver_data_dir
