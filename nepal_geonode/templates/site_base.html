@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block extra_head %}
+<style>
+    .navbar-brand {
+        background: url({% static "img/logo.gif" %}) 0 15px no-repeat;
+        background-size: 100%;
+        width: 300px;
+        opacity: 0.9;
+        border-radius: 20%;
+        margin-right: 10px;
+    }
+</style>
+{% endblock extra_head %}
