@@ -23,6 +23,9 @@ LANGUAGES = (
 
 TIME_ZONE = "Asia/Kathmandu"
 
+INSTALLED_APPS += ('geonode-client',)
+LAYER_PREVIEW_LIBRARY = 'react'
+
 # OSGEO_IMPORTER = 'osgeo_importer'
 
 # IMPORT_HANDLERS = [
