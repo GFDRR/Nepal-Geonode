@@ -23,5 +23,5 @@ LANGUAGES = (
 
 TIME_ZONE = "Asia/Kathmandu"
 
-INSTALLED_APPS += ('geonode-client',)
+# INSTALLED_APPS += ('geonode-client',)
 LAYER_PREVIEW_LIBRARY = 'react'
