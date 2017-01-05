@@ -1,6 +1,12 @@
 ---
 - hosts: production
   remote_user: geosolutions
+  gather_facts: no
+  pre_tasks:
+    - name: 'install python2'
+      raw: apt -y update && apt install -y python-minimal
+      sudo: yes
+    - setup:
   vars:
     app_name: nepal_geonode
     github_user: GFDRR
@@ -10,4 +16,5 @@
     geoserver_url: http://build.geonode.org/geoserver/latest/geoserver-2.9.x-oauth2.war
     main_module: "config.settings"
   roles:
-     - { role: ortelius.geonode }
+     - { role: GeoNode.geonode }
+
