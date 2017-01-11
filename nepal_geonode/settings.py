@@ -9,7 +9,7 @@ def str2bool(v):
 SITENAME = 'nepal_geonode'
 
 # Used for relative settings elsewhere.
-ROOT_DIR = os.path.abspath(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
+ROOT_DIR = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 APPS_DIR = os.path.join(ROOT_DIR, "nepal_geonode")
 
 # Additional directories which hold static files
@@ -213,3 +213,8 @@ _DEFAULT_LOCALE_PATHS = (
     os.path.join(APPS_DIR, "locale"),
 )
 LOCALE_PATHS = os.getenv('LOCALE_PATHS', _DEFAULT_LOCALE_PATHS)
+
+try:
+    from .local_settings import *  # noqa
+except ImportError:
+    pass
