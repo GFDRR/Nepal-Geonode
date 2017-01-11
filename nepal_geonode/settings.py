@@ -140,16 +140,16 @@ _INIT_DEFAULT_LAYER_SOURCE = {
 
 DEFAULT_LAYER_SOURCE = os.getenv('DEFAULT_LAYER_SOURCE', _INIT_DEFAULT_LAYER_SOURCE)
 
-_DEFAULT_MAP_BASELAYERS = [{
-    "source": {"ptype": "gxp_osmsource"},
-    "type": "OpenLayers.Layer.OSM",
-    "name": "mapnik",
-    "visibility": True,
-    "fixed": True,
-    "group": "background"
-}]
+# _DEFAULT_MAP_BASELAYERS = [{
+#     "source": {"ptype": "gxp_osmsource"},
+#     "type": "OpenLayers.Layer.OSM",
+#     "name": "mapnik",
+#     "visibility": True,
+#     "fixed": True,
+#     "group": "background"
+# }]
 
-MAP_BASELAYERS = os.getenv('MAP_BASELAYERS', _DEFAULT_MAP_BASELAYERS)
+# MAP_BASELAYERS = os.getenv('MAP_BASELAYERS', _DEFAULT_MAP_BASELAYERS)
 
 # Setting TWITTER_CARD to True will enable Twitter Cards
 # https://dev.twitter.com/cards/getting-started
