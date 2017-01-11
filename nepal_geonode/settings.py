@@ -1,6 +1,11 @@
 # import environ
 from geonode.settings import *
 
+
+def str2bool(v):
+    return v.lower() in ("yes", "true", "t", "1")
+
+
 SITENAME = 'nepal_geonode'
 
 # Used for relative settings elsewhere.
@@ -172,7 +177,7 @@ if 'geonode.geoserver' in INSTALLED_APPS:
     _DEFAULT_ABSOLUTE_URL_OVERRIDES = {
         'auth.user': get_user_url
     }
-    ABSOLUTE_URL_OVERRIDES = os.getenv('ABSOLUTE_URL_OVERRIDES', DEFAULT_ABSOLUTE_URL_OVERRIDES)
+    ABSOLUTE_URL_OVERRIDES = os.getenv('ABSOLUTE_URL_OVERRIDES', _DEFAULT_ABSOLUTE_URL_OVERRIDES)
     AUTH_PROFILE_MODULE = os.getenv('AUTH_PROFILE_MODULE', 'maps.Contact')
     REGISTRATION_OPEN = str2bool(os.getenv('REGISTRATION_OPEN', 'True'))
 
