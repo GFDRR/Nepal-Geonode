@@ -9,8 +9,8 @@ def read(*rnames):
 setup(
     name="nepal_geonode",
     version="0.1",
-    author="",
-    author_email="",
+    author="Ashish Acharya",
+    author_email="ashish.acharya14@gmail.com",
     description="Nepal GeoNode, based on GeoNode",
     long_description=(read('README.rst')),
     # Full list of classifiers can be found at:
