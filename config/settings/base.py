@@ -14,7 +14,7 @@ STATICFILES_DIRS.append(
 
 TEMPLATES[0]['DIRS'] = [os.path.join(APPS_DIR, "templates"), os.path.join(PROJECT_ROOT, "templates")]
 
-ROOT_URLCONF = 'config.urls'
+ROOT_URLCONF = os.getenv('ROOT_URLCONF', 'nepal_geonode.urls')
 
 LANGUAGES = (
     ('en', 'English'),
@@ -22,6 +22,3 @@ LANGUAGES = (
 )
 
 TIME_ZONE = "Asia/Kathmandu"
-
-# INSTALLED_APPS += ('geonode-client',)
-LAYER_PREVIEW_LIBRARY = 'react'
