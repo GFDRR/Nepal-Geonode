@@ -17,6 +17,12 @@ STATICFILES_DIRS.append(
     os.path.join(APPS_DIR, "static"),
 )
 
+# Absolute path to the directory that holds static files like app media.
+# Example: "/home/media/media.lawrence.com/apps/"
+STATIC_ROOT = os.getenv('STATIC_ROOT',
+                        os.path.join(APPS_DIR, "static_root")
+                        )
+
 TEMPLATES[0]['DIRS'] = [os.path.join(APPS_DIR, "templates"), os.path.join(PROJECT_ROOT, "templates")]
 
 ROOT_URLCONF = os.getenv('ROOT_URLCONF', 'nepal_geonode.urls')
