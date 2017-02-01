@@ -3,13 +3,27 @@
 {% load staticfiles %}
 {% load base_tags %}
 
+{% block extra_head %}
+  <style>
+        .home .jumbotron {
+            background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.2)),url({% static "img/homepage.jpg" %}) no-repeat;
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            margin-bottom: 0;
+            padding: 7.5em 0 3.75em;
+            text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+        }
+  </style>
+{% endblock extra_head %}
+
 {% block hero %}
   <div class="jumbotron">
   <div class="container">
-      <h2>{% trans "WELCOME TO NEPAL GOVERNMENT'S GEONODE" %}</h2>
-      <p>{% blocktrans %}Nepal, officially known as the Democratic Republic of Nepal, is a landlocked sovereign country located in South Asia. It has an area of 147,181 square kilometres and a population of approximately 2.78 crores (27.8 million). It is located in the Himalayas and bordered to the north by the People’s Republic of China, and to the south, east, and west by the Republic of India. Kathmandu is the capital and the most populous city of the country.{% endblocktrans %}</p><br>
-      <p>{% blocktrans %}Based on GeoNode, this is a public platform for GIS Data related to Nepal.{% endblocktrans %}</p>
+      <h1>{% trans "NEPAL<br> GEONODE" %}</h1>
+
+      <h2>{% blocktrans %}A public platform for<br> GIS Data related to Nepal.{% endblocktrans %}</h2>
       <a class="btn btn-default btn-lg" target="_blank" href="http://docs.geonode.org/en/master/tutorials/users/index.html" role="button">{% blocktrans %}Get Started &raquo;{% endblocktrans %}</a>
   </div>
   </div>
-{% endblock %}
+{% endblock hero %}
