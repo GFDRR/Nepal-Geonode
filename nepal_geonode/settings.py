@@ -23,6 +23,10 @@ STATIC_ROOT = os.getenv('STATIC_ROOT',
                         os.path.join(APPS_DIR, "static_root")
                         )
 
+# Absolute path to the directory that holds media.
+# Example: "/home/media/media.lawrence.com/"
+MEDIA_ROOT = os.getenv('MEDIA_ROOT', os.path.join(ROOT_DIR, "uploaded"))
+
 TEMPLATES[0]['DIRS'] = [os.path.join(APPS_DIR, "templates"), os.path.join(PROJECT_ROOT, "templates")]
 
 ROOT_URLCONF = os.getenv('ROOT_URLCONF', 'nepal_geonode.urls')
