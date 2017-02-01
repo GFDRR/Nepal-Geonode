@@ -5,7 +5,7 @@ DEFAULT_TOPICCATEGORY = 'location'
 
 # django debug toolbar
 DEBUG_TOOLBAR_PATCH_SETTINGS = False
-INSTALLED_APPS += ('debug_toolbar', )
+INSTALLED_APPS += ('debug_toolbar', 'geonode-client',)
 MIDDLEWARE_CLASSES += ('debug_toolbar.middleware.DebugToolbarMiddleware',)
 INTERNAL_IPS = ('127.0.0.1', )
 #
