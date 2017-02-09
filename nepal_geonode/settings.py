@@ -1,42 +1,133 @@
-# import environ
-from geonode.settings import *
+# -*- coding: utf-8 -*-
+
+import os
+import dj_database_url
+import copy
+from geonode.settings import *  # noqa
+from geonode.settings import (
+    MIDDLEWARE_CLASSES,
+    STATICFILES_DIRS,
+    INSTALLED_APPS,
+    CELERY_IMPORTS,
+    MAP_BASELAYERS,
+    DATABASES,
+    CATALOGUE
+)
 
 
 def str2bool(v):
     return v.lower() in ("yes", "true", "t", "1")
 
-
-SITENAME = 'nepal_geonode'
-
+SITEURL = os.getenv('SITEURL', "http://geonode.ashishacharya.com/")
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
+GEONODE_ROOT = os.path.abspath(os.path.dirname(geonode_path))
 # Used for relative settings elsewhere.
 ROOT_DIR = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 APPS_DIR = os.path.join(ROOT_DIR, "nepal_geonode")
 
+DEBUG = str2bool(os.getenv('DEBUG', 'True'))
+TEMPLATE_DEBUG = str2bool(os.getenv('TEMPLATE_DEBUG', 'False'))
+DEBUG_STATIC = str2bool(os.getenv('DEBUG_STATIC', 'False'))
+SECRET_KEY = os.getenv('SECRET_KEY', "02u6ws_cep$^^+vea-th+b2yuyo+$rhg)v-x&mj!p1cyt9nk+!")
+# DATABASE_URL = os.getenv('DATABASE_URL', 'postgresql://nepal_geonode')
+# DATABASES = {'default': dj_database_url.parse(DATABASE_URL, conn_max_age=600), }
+MANAGERS = ADMINS = os.getenv('ADMINS', [])
+TIME_ZONE = "Asia/Kathmandu"
+SITE_ID = int(os.getenv('SITE_ID', '1'))
+USE_I18N = str2bool(os.getenv('USE_I18N', 'True'))
+USE_L10N = str2bool(os.getenv('USE_I18N', 'True'))
+LANGUAGE_CODE = os.getenv('LANGUAGE_CODE', "en-us")
+MODELTRANSLATION_LANGUAGES = ['en', ]
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
+MODELTRANSLATION_FALLBACK_LANGUAGES = ('en',)
+TEMPLATES[0]['DIRS'] = [os.path.join(APPS_DIR, "templates"), os.path.join(PROJECT_ROOT, "templates")]
+MEDIA_ROOT = os.getenv('MEDIA_ROOT', os.path.join(ROOT_DIR, "uploaded"))
+MEDIA_URL = os.getenv('MEDIA_URL', "/uploaded/")
+LOCAL_MEDIA_URL = os.getenv('LOCAL_MEDIA_URL', "/uploaded/")
+STATIC_ROOT = os.getenv('STATIC_ROOT',
+                        os.path.join(APPS_DIR, "static_root")
+                        )
 # Additional directories which hold static files
 STATICFILES_DIRS.append(
     os.path.join(APPS_DIR, "static"),
 )
-
-# Absolute path to the directory that holds static files like app media.
-# Example: "/home/media/media.lawrence.com/apps/"
-STATIC_ROOT = os.getenv('STATIC_ROOT',
-                        os.path.join(APPS_DIR, "static_root")
-                        )
-
-# Absolute path to the directory that holds media.
-# Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = os.getenv('MEDIA_ROOT', os.path.join(ROOT_DIR, "uploaded"))
-
-TEMPLATES[0]['DIRS'] = [os.path.join(APPS_DIR, "templates"), os.path.join(PROJECT_ROOT, "templates")]
-
 ROOT_URLCONF = os.getenv('ROOT_URLCONF', 'nepal_geonode.urls')
+LOGIN_URL = os.getenv('LOGIN_URL', '/account/login/')
+LOGOUT_URL = os.getenv('LOGOUT_URL', '/account/logout/')
+MAX_DOCUMENT_SIZE = int(os.getenv('MAX_DOCUMENT_SIZE ', '2'))  # MB
+
+INSTALLED_APPS = (
+    'geonode',
+) + INSTALLED_APPS
+
+
+ALT_OSM_BASEMAPS = os.environ.get('ALT_OSM_BASEMAPS', True)
+CARTODB_BASEMAPS = os.environ.get('CARTODB_BASEMAPS', True)
+STAMEN_BASEMAPS = os.environ.get('STAMEN_BASEMAPS', True)
+THUNDERFOREST_BASEMAPS = os.environ.get('THUNDERFOREST_BASEMAPS', True)
+MAPBOX_ACCESS_TOKEN = os.environ.get('MAPBOX_ACCESS_TOKEN', None)
+BING_API_KEY = os.environ.get('BING_API_KEY', None)
+
+_INIT_DEFAULT_LAYER_SOURCE = {
+    "ptype": "gxp_wmscsource",
+    "url": "/geoserver/wms",
+    "restUrl": "/gs/rest"
+}
+
+DEFAULT_LAYER_SOURCE = os.getenv('DEFAULT_LAYER_SOURCE', _INIT_DEFAULT_LAYER_SOURCE)
+
+MAP_BASELAYERS = [{
+    "source": {"ptype": "gxp_osmsource"},
+    "type": "OpenLayers.Layer.OSM",
+    "name": "OpenStreetMap",
+    "visibility": True,
+    "fixed": True,
+    "group": "background"
+}]
+#MAP_BASELAYERS[0]['source']['url'] = OGC_SERVER['default']['LOCATION'] + 'wms'
+
+# define the urls after the settings are overridden
+if 'geonode.geoserver' in INSTALLED_APPS:
+    LOCAL_GEOSERVER = {
+        "source": {
+            "ptype": "gxp_wmscsource",
+            "url": OGC_SERVER['default']['PUBLIC_LOCATION'] + "wms",
+            "restUrl": "/gs/rest"
+        }
+    }
+    baselayers = MAP_BASELAYERS
+    MAP_BASELAYERS = [LOCAL_GEOSERVER]
+    MAP_BASELAYERS.extend(baselayers)
+
+# Add additional paths (as regular expressions) that don't require
+# authentication.
+AUTH_EXEMPT_URLS = ('/api/o/*', '/api/roles', '/api/adminRole', '/api/users',)
+
+# A tuple of hosts the proxy can send requests to.
+PROXY_ALLOWED_HOSTS = ()
+
+# The proxy to use when making cross origin requests.
+PROXY_URL = '/proxy/?url=' if DEBUG else None
+
+LAYER_PREVIEW_LIBRARY = 'react'
+
+# Require users to authenticate before using Geonode
+LOCKDOWN_GEONODE = str2bool(os.getenv('LOCKDOWN_GEONODE', 'True'))
+
+# Require users to authenticate before using Geonode
+if LOCKDOWN_GEONODE:
+    MIDDLEWARE_CLASSES = MIDDLEWARE_CLASSES + \
+        ('geonode.security.middleware.LoginRequiredMiddleware',)
+
+
+ALLOWED_HOSTS = ['localhost', 'geonode.ashishacharya.com']
+
+SITENAME = 'nepal_geonode'
 
 LANGUAGES = (
     ('en', 'English'),
     ('ne', 'Nepali'),
 )
-
-TIME_ZONE = "Asia/Kathmandu"
 
 # pycsw settings
 PYCSW = {
@@ -87,125 +178,20 @@ PYCSW = {
     }
 }
 
-# define the urls after the settings are overridden
-if 'geonode.geoserver' in INSTALLED_APPS:
-    LOCAL_GEOSERVER = {
-        "source": {
-            "ptype": "gxp_wmscsource",
-            "url": OGC_SERVER['default']['PUBLIC_LOCATION'] + "wms",
-            "restUrl": "/gs/rest"
-        }
-    }
-    baselayers = MAP_BASELAYERS
-    MAP_BASELAYERS = [LOCAL_GEOSERVER]
-    MAP_BASELAYERS.extend(baselayers)
-
-    def get_user_url(u):
-        from django.contrib.sites.models import Site
-        s = Site.objects.get_current()
-        return "http://" + s.domain + "/profiles/" + u.username
-
-    _DEFAULT_ABSOLUTE_URL_OVERRIDES = {
-        'auth.user': get_user_url
-    }
-    ABSOLUTE_URL_OVERRIDES = os.getenv('ABSOLUTE_URL_OVERRIDES', _DEFAULT_ABSOLUTE_URL_OVERRIDES)
-    AUTH_PROFILE_MODULE = os.getenv('AUTH_PROFILE_MODULE', 'maps.Contact')
-    REGISTRATION_OPEN = str2bool(os.getenv('REGISTRATION_OPEN', 'True'))
-
-    ACCOUNT_ACTIVATION_DAYS = int(os.getenv('ACCOUNT_ACTIVATION_DAYS', '7'))
-
-    # TODO: Allow overriding with an env var
-    DB_DATASTORE = str2bool(os.getenv('DB_DATASTORE', 'True'))
-
-    ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', ['localhost', ])
-
 AUTH_IP_WHITELIST = []
 
 # Keywords thesauri
 # e.g. THESAURI = [{'name':'inspire_themes', 'required':True, 'filter':True}, {'name':'inspire_concepts', 'filter':True}, ]
 # Required: (boolean, optional, default false) mandatory while editing metadata (not implemented yet)
 # Filter: (boolean, optional, default false) a filter option on that thesaurus will appear in the main search page
-THESAURI = []
+# THESAURI = []
 
-
-# Email for users to contact admins.
-THEME_ACCOUNT_CONTACT_EMAIL = os.getenv('THEME_ACCOUNT_CONTACT_EMAIL', 'admin@example.com')
-
-
-# The FULLY QUALIFIED url to the GeoServer instance for this GeoNode.
-GEOSERVER_BASE_URL = os.getenv('GEOSERVER_BASE_URL',
-                               "http://localhost:8001/geoserver-geonode-dev/")
-
-# The username and password for a user that can add and edit layer details on GeoServer
-
-_DEFAULT_GEOSERVER_CREDENTIALS = "geoserver_admin", SECRET_KEY
-GEOSERVER_CREDENTIALS = os.getenv('GEOSERVER_CREDENTIALS', ("geoserver_admin", SECRET_KEY))
-
-
-_INIT_DEFAULT_LAYER_SOURCE = {
-    "ptype": "gxp_wmscsource",
-    "url": "/geoserver/wms",
-    "restUrl": "/gs/rest"
-}
-
-DEFAULT_LAYER_SOURCE = os.getenv('DEFAULT_LAYER_SOURCE', _INIT_DEFAULT_LAYER_SOURCE)
-
-# _DEFAULT_MAP_BASELAYERS = [{
-#     "source": {"ptype": "gxp_osmsource"},
-#     "type": "OpenLayers.Layer.OSM",
-#     "name": "mapnik",
-#     "visibility": True,
-#     "fixed": True,
-#     "group": "background"
-# }]
-
-# MAP_BASELAYERS = os.getenv('MAP_BASELAYERS', _DEFAULT_MAP_BASELAYERS)
-
-# Setting TWITTER_CARD to True will enable Twitter Cards
-# https://dev.twitter.com/cards/getting-started
-# Be sure to replace @GeoNode with your organization or site's twitter handle.
-# TWITTER_CARD = True
-# TWITTER_SITE = '@GeoNode'
-# TWITTER_HASHTAGS = ['geonode']
-
-# Add additional paths (as regular expressions) that don't require
-# authentication.
-AUTH_EXEMPT_URLS = ('/api/o/*', '/api/roles', '/api/adminRole', '/api/users',)
 
 # what does this do?
 # DEFAULT_SEARCH_SIZE = '50'
 
 # Number of results per page listed in the GeoNode search pages
 CLIENT_RESULTS_LIMIT = int(os.getenv('CLIENT_RESULTS_LIMIT', '100'))
-
-if 'geonode.geoserver' in INSTALLED_APPS:
-    def get_user_url(u):
-        from django.contrib.sites.models import Site
-        s = Site.objects.get_current()
-        return "http://" + s.domain + "/profiles/" + u.username
-
-    _DEFAULT_ABSOLUTE_URL_OVERRIDES = {
-        'auth.user': get_user_url
-    }
-    ABSOLUTE_URL_OVERRIDES = os.getenv('ABSOLUTE_URL_OVERRIDES', _DEFAULT_ABSOLUTE_URL_OVERRIDES)
-    AUTH_PROFILE_MODULE = os.getenv('AUTH_PROFILE_MODULE', 'maps.Contact')
-    REGISTRATION_OPEN = str2bool(os.getenv('REGISTRATION_OPEN', 'True'))
-
-    ACCOUNT_ACTIVATION_DAYS = int(os.getenv('ACCOUNT_ACTIVATION_DAYS', '7'))
-
-    # TODO: Allow overriding with an env var
-    DB_DATASTORE = str2bool(os.getenv('DB_DATASTORE', 'True'))
-
-    ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', ['localhost', ])
-
-# Keywords thesauri
-# e.g. THESAURI = [{'name':'inspire_themes', 'required':True, 'filter':True}, {'name':'inspire_concepts', 'filter':True}, ]
-# Required: (boolean, optional, default false) mandatory while editing metadata (not implemented yet)
-# Filter: (boolean, optional, default false) a filter option on that thesaurus will appear in the main search page
-THESAURI = []
-
-# maps
-LAYER_PREVIEW_LIBRARY = 'react'
 
 # Where should newly created maps be focused?
 # todo: set this to Nepal
