@@ -13,7 +13,7 @@
     code_repository: "https://github.com/GFDRR/Nepal-Geonode.git"
     server_name: 149.56.94.154
     deploy_user: geosolutions
-    geoserver_url: http://build.geonode.org/geoserver/latest/geoserver-2.9.x-oauth2.war
-    main_module: "nepal_geonode"
+    # geoserver_url: http://build.geonode.org/geoserver/latest/geoserver-2.9.x-oauth2.war
+    # main_module: "nepal_geonode"
   roles:
      - { role: GeoNode.geonode }
