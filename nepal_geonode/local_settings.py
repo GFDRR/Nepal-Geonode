@@ -12,25 +12,25 @@
 
 # SITEURL = "http://localhost:8000/"
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'nepal_geonode',
-#         'USER': 'nepal_geonode',
-#         'PASSWORD': 'nepal_geonode',
-#     },
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'nepal_geonode',
+        'USER': 'nepal_geonode',
+        'PASSWORD': 'nepal_geonode',
+    },
 
-#     # vector datastore for uploads
-#     'datastore': {
-#         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-#         # 'ENGINE': '',  # Empty ENGINE name disables
-#         'NAME': 'nepal_geonode_app',
-#         'USER': 'nepal_geonode',
-#         'PASSWORD': 'nepal_geonode',
-#         'HOST': 'localhost',
-#         'PORT': '5432',
-#     }
-# }
+    # vector datastore for uploads
+    'datastore': {
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        # 'ENGINE': '',  # Empty ENGINE name disables
+        'NAME': 'nepal_geonode_app',
+        'USER': 'nepal_geonode',
+        'PASSWORD': 'nepal_geonode',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
 
 # GEOSERVER_LOCATION = os.getenv(
 #     'GEOSERVER_LOCATION', 'http://localhost:8080/geoserver/'
