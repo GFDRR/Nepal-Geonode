@@ -128,7 +128,7 @@ MODELTRANSLATION_FALLBACK_LANGUAGES = ('en',)
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = os.getenv('MEDIA_ROOT', os.path.join(PROJECT_ROOT, "uploaded"))
+MEDIA_ROOT = os.getenv('MEDIA_ROOT', os.path.join(ROOT_DIR, "uploaded"))
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
@@ -138,7 +138,7 @@ LOCAL_MEDIA_URL = os.getenv('LOCAL_MEDIA_URL',"/uploaded/")
 
 # Absolute path to the directory that holds static files like app media.
 # Example: "/home/media/media.lawrence.com/apps/"
-STATIC_ROOT = os.getenv('STATIC_ROOT',os.path.join(PROJECT_ROOT, "static_root"))
+STATIC_ROOT = os.getenv('STATIC_ROOT',os.path.join(APPS_DIR, "static_root"))
 
 # URL that handles the static files like app media.
 # Example: "http://media.lawrence.com"
