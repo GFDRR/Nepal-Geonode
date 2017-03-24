@@ -2,6 +2,8 @@ import os
 
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
+SITEURL = "http://geonode.ashishacharya.com/"
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -9,7 +11,6 @@ DATABASES = {
         'USER': 'nepal_geonode',
         'PASSWORD': 'nepal_geonode',
     },
-
     # vector datastore for uploads
     'datastore': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
@@ -22,38 +23,78 @@ DATABASES = {
     }
 }
 
-
-SITEURL = "http://geonode.ashishacharya.com"
+GEOSERVER_LOCATION = os.getenv(
+    'GEOSERVER_LOCATION', 'http://localhost:8080/geoserver/'
+)
+GEOSERVER_PUBLIC_LOCATION = os.getenv(
+    'GEOSERVER_PUBLIC_LOCATION', 'http://geonode.ashishacharya.com/geoserver/'
+)
 
 # OGC (WMS/WFS/WCS) Server Settings
-# OGC_SERVER = {
-#     'default' : {
-#         'BACKEND' : 'geonode.geoserver',
-#         'LOCATION' : 'http://localhost:8080/geoserver/',
-#         'LOGIN_ENDPOINT': 'j_spring_oauth2_geonode_login',
-#         'LOGOUT_ENDPOINT': 'j_spring_oauth2_geonode_logout',
-#         'PUBLIC_LOCATION' : 'http://geonode.ashishacharya.com/geoserver/',
-#         'USER' : 'admin',
-#         'PASSWORD' : 'geoserver',
-#         'MAPFISH_PRINT_ENABLED' : True,
-#         'PRINT_NG_ENABLED' : True,
-#         'GEONODE_SECURITY_ENABLED' : True,
-#         'GEOGIG_ENABLED' : False,
-#         'WMST_ENABLED' : False,
-#         'BACKEND_WRITE_ENABLED': True,
-#         'WPS_ENABLED' : False,
-#         'LOG_FILE': '%s/geoserver/data/logs/geoserver.log' % os.path.abspath(os.path.join(PROJECT_ROOT, os.pardir)),
-#         # Set to name of database in DATABASES dictionary to enable
-#         'DATASTORE': 'nepal_geonode_app', #'datastore',
-#     }
-# }
+OGC_SERVER = {
+    'default': {
+        'BACKEND': 'geonode.geoserver',
+        'LOCATION': GEOSERVER_LOCATION,
+        'LOGIN_ENDPOINT': 'j_spring_oauth2_geonode_login',
+        'LOGOUT_ENDPOINT': 'j_spring_oauth2_geonode_logout',
+        # PUBLIC_LOCATION needs to be kept like this because in dev mode
+        # the proxy won't work and the integration tests will fail
+        # the entire block has to be overridden in the local_settings
+        'PUBLIC_LOCATION': GEOSERVER_PUBLIC_LOCATION,
+        'USER': 'admin',
+        'PASSWORD': 'geoserver',
+        'MAPFISH_PRINT_ENABLED': True,
+        'PRINT_NG_ENABLED': True,
+        'GEONODE_SECURITY_ENABLED': True,
+        'GEOGIG_ENABLED': False,
+        'WMST_ENABLED': False,
+        'BACKEND_WRITE_ENABLED': True,
+        'WPS_ENABLED': False,
+        'LOG_FILE': '%s/geoserver/data/logs/geoserver.log' % os.path.abspath(os.path.join(PROJECT_ROOT, os.pardir)),
+        # Set to dictionary identifier of database containing spatial data in DATABASES dictionary to enable
+        'DATASTORE': 'datastore',  # 'datastore',
+    }
+}
 
-# CATALOGUE = {
-#     'default': {
-#         'ENGINE': 'geonode.catalogue.backends.pycsw_local',
-#         'URL': '%scatalogue/csw' % SITEURL,
-#     }
-# }
+# If you want to enable Mosaics use the following configuration
+# UPLOADER = {
+# 'BACKEND': 'geonode.rest',
+#    'BACKEND': 'geonode.importer',
+#    'OPTIONS': {
+#        'TIME_ENABLED': True,
+#        'MOSAIC_ENABLED': True,
+#        'GEOGIG_ENABLED': False,
+#    }
+#}
+
+
+CATALOGUE = {
+    'default': {
+        # The underlying CSW implementation
+        # default is pycsw in local mode (tied directly to GeoNode Django DB)
+        'ENGINE': 'geonode.catalogue.backends.pycsw_local',
+        # pycsw in non-local mode
+        # 'ENGINE': 'geonode.catalogue.backends.pycsw_http',
+        # GeoNetwork opensource
+        # 'ENGINE': 'geonode.catalogue.backends.geonetwork',
+        # deegree and others
+        # 'ENGINE': 'geonode.catalogue.backends.generic',
+
+        # The FULLY QUALIFIED base url to the CSW instance for this GeoNode
+        'URL': '%scatalogue/csw' % SITEURL,
+        # 'URL': 'http://localhost:8080/geonetwork/srv/en/csw',
+        # 'URL': 'http://localhost:8080/deegree-csw-demo-3.0.4/services',
+
+        # login credentials (for GeoNetwork)
+        'USER': 'admin',
+        'PASSWORD': 'admin',
+    }
+}
+
+# Default preview library
+# LAYER_PREVIEW_LIBRARY = 'geoext'
+
+MEDIA_ROOT = "/var/www/nepal_geonode/uploaded"
+STATIC_ROOT = "/var/www/nepal_geonode/static"
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', ['localhost', '127.0.0.1', u'geonode.ashishacharya.com'])
-
