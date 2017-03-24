@@ -1,5 +1,6 @@
 import os
 
+# DEBUG = False
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
 SITEURL = "http://geonode.ashishacharya.com/"
@@ -78,7 +79,7 @@ CATALOGUE = {
 # Default preview library
 # LAYER_PREVIEW_LIBRARY = 'geoext'
 
-MEDIA_ROOT = "/var/www/nepal_geonode/uploaded"
-STATIC_ROOT = "/var/www/nepal_geonode/static"
+# MEDIA_ROOT = "/var/www/nepal_geonode/uploaded"
+# STATIC_ROOT = "/var/www/nepal_geonode/static"
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', ['localhost', '127.0.0.1', u'geonode.ashishacharya.com', '149.56.94.155'])
