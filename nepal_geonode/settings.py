@@ -496,7 +496,7 @@ GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY',"ABQIAAAAkofooZxTfcCv9Wi3zzGTVxTnme5
 # GeoNode specific settings
 #
 
-SITEURL = os.getenv('SITEURL',"http://geonode.ashishacharya.com/")
+SITEURL = os.getenv('SITEURL', "http://localhost:8000/")
 
 USE_QUEUE = str2bool(os.getenv('USE_QUEUE', 'False'))
 
@@ -515,10 +515,10 @@ MISSING_THUMBNAIL = os.getenv('MISSING_THUMBNAIL','geonode/img/missing_thumb.png
 CACHE_TIME = int(os.getenv('CACHE_TIME','0'))
 
 GEOSERVER_LOCATION = os.getenv(
-    'GEOSERVER_LOCATION', 'http://geonode.ashishacharya.com/geoserver/'
+   'GEOSERVER_LOCATION', 'http://localhost:8080/geoserver/'
 )
 GEOSERVER_PUBLIC_LOCATION = os.getenv(
-    'GEOSERVER_PUBLIC_LOCATION', 'http://geonode.ashishacharya.com/geoserver/'
+    'GEOSERVER_PUBLIC_LOCATION', 'http://localhost:8080/geoserver/'
 )
 
 # OGC (WMS/WFS/WCS) Server Settings
