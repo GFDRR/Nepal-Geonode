@@ -17,7 +17,7 @@ GEONODE_VENV_PATH="${USER_HOME}/venvs/nepal_geonode/bin/activate"
 cd $OSM_EXTRACT_CODE_PATH
 
 # Execute code to fetch and update OSM data in postgis database
-make postgis URL=$URL NAME=nepal
+make all URL=$URL NAME=nepal
 
 # Update published date in Nepal-Geonode database
 psql -d nepal_geonode -c "update base_resourcebase set date = current_date where id in (select resourcebase_ptr_id from layers_layer where store = 'nepal_osm');"
