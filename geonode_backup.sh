@@ -21,4 +21,4 @@ cd $BACKUP_FOLDER_PATH
 python "${GEONODE_CODE_PATH}/backup_cleaner.py"
 
 # Sync data to remote service
-rclone sync . drive:geonode_backup
+rclone sync . drive:Nepal\ Geonode/backup
