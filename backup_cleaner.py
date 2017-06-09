@@ -5,7 +5,7 @@ import os
 files = glob.glob("*.zip")
 
 # Exclude the first two items
-files_to_delete = files[2:]
+files_to_delete = files[3:]
 
 for file in files_to_delete:
     # Remove file
