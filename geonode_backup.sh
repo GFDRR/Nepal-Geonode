@@ -20,5 +20,5 @@ cd $BACKUP_FOLDER_PATH
 # Clean backup data
 python "${GEONODE_CODE_PATH}/backup_cleaner.py"
 
-# Sync data to remote service
-rclone sync . drive:Nepal\ Geonode/backup
+# Sync only the backup files to remote service
+rclone sync --include '*.zip' . drive:'Nepal Geonode/backup'
