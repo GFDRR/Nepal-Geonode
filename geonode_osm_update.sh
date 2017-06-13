@@ -22,6 +22,9 @@ make all URL=$URL NAME=nepal
 # Update published date in Nepal-Geonode database
 psql -d nepal_geonode -c "update base_resourcebase set date = current_date where id in (select resourcebase_ptr_id from layers_layer where store = 'nepal_osm');"
 
+# Cleanup when done
+make clean NAME=nepal
+
 # Change directory to Nepal-Geonode
 cd $GEONODE_CODE_PATH
 
