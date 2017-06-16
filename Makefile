@@ -1,8 +1,8 @@
 loaddata:
 	# Load fixture data
-	python manage.py loaddata fixture/initial_data.json
-	python manage.py loaddata fixture/default_oauth_apps.json
-	python manage.py loaddata fixture/sample_admin.json
+	python manage.py loaddata fixtures/initial_data.json
+	python manage.py loaddata fixtures/sample_admin.json
+	python manage.py loaddata fixtures/default_oauth_apps.json
 
 restart:
 	sudo service uwsgi-emperor restart
