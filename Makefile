@@ -13,3 +13,6 @@ pull:
 	git pull
 
 deploy: pull restart
+
+fixlayerpermission:
+	sudo chmod a+w uploaded/layers/*
