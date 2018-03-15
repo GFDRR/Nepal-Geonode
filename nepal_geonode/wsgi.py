@@ -1,5 +1,5 @@
 """
-WSGI config for state_2c_geonode project.
+WSGI config for nepal_geonode project.
 
 This module contains the WSGI application used by Django's development server
 and any production WSGI deployments. It should expose a module-level variable
