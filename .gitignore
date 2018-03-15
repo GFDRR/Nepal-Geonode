@@ -3,10 +3,10 @@
 celerybeat-schedule.*
 downloaded/
 geoserver/
+uploaded/
+ansible/*
 nepal_geonode.egg-info/
 nepal_geonode/static_root/
 src/
 nepal_geonode/uploaded/
-playbook.retry
-nepal_geonode/local_settings.py
-uploaded/
+GeoIPCities.dat
