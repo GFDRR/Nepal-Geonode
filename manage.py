@@ -1,7 +1,9 @@
 #!/usr/bin/env python
+
+# -*- coding: utf-8 -*-
 #########################################################################
 #
-# Copyright (C) 2016 OSGeo
+# Copyright (C) 2017 OSGeo
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -21,9 +23,9 @@
 import os
 import sys
 
-if __name__ == "__main__":
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "nepal_geonode.settings")
 
+if __name__ == "__main__":
     from django.core.management import execute_from_command_line
 
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "nepal_geonode.settings")
     execute_from_command_line(sys.argv)
