@@ -1,3 +1,23 @@
+# -*- coding: utf-8 -*-
+#########################################################################
+#
+# Copyright (C) 2018 OSGeo
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+#########################################################################
+
 import os
 from distutils.core import setup
 
@@ -9,9 +29,9 @@ def read(*rnames):
 setup(
     name="nepal_geonode",
     version="0.1",
-    author="Ashish Acharya",
-    author_email="ashish.acharya14@gmail.com",
-    description="Nepal GeoNode, based on GeoNode",
+    author="Nepal GeoNode Team (WB)",
+    author_email="",
+    description="nepal_geonode, based on GeoNode",
     long_description=(read('README.rst')),
     # Full list of classifiers can be found at:
     # http://pypi.python.org/pypi?%3Aaction=list_classifiers
@@ -20,10 +40,26 @@ setup(
     ],
     license="BSD",
     keywords="nepal_geonode geonode django",
-    url='https://github.com/GFDRR/Nepal-Geonode.git',
+    url='https://github.com/GFDRR/Nepal-Geonode',
     packages=['nepal_geonode', ],
     include_package_data=True,
     zip_safe=False,
     install_requires=[
+        'Django==1.8.19',
+        'six==1.10.0',
+        'django-cuser==2017.3.16',
+        'django-model-utils==3.1.1',
+        'django-autocomplete-light==2.3.3',
+        'pyshp==1.2.12',
+        'celery==4.1.0',
+        'Shapely>=1.5.13,<1.6.dev0',
+        'OWSLib==0.15.0',
+        'proj==0.1.0',
+        'pyproj==1.9.5.1',
+        'inflection==0.3.1',
+        'oauthlib==2.0.1',
+        'python-dateutil==2.6.1',
+        'pycsw==2.0.3',
+        'geonode==2.8',
     ],
 )
