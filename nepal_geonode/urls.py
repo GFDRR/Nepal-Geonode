@@ -19,9 +19,18 @@
 #########################################################################
 
 from django.conf.urls import patterns, url, include
+from django.contrib import admin
 from django.views.generic import TemplateView
 
 from geonode.urls import urlpatterns
+
+# Text to put at the end of each page's <title>.
+admin.site.site_title = 'Nepal GeoNode Site Admin'
+# Text to put in each page's <h1>.
+admin.site.site_header = 'Nepal GeoNode Administration'
+# Text to put at the top of the admin index page.
+admin.site.index_title = 'Nepal GeoNode'
+
 
 urlpatterns += (
     # include your urls here
