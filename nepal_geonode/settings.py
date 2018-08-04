@@ -21,10 +21,7 @@
 # Django settings for the GeoNode project.
 import os
 # Load more settings from a file called local_settings.py if it exists
-try:
-    from geonode.local_settings import *
-except ImportError:
-    from geonode.settings import *
+from geonode.settings import *
 
 #
 # General Django development settings
@@ -39,8 +36,7 @@ LOCAL_ROOT = os.path.abspath(os.path.dirname(__file__))
 
 WSGI_APPLICATION = "{}.wsgi.application".format(PROJECT_NAME)
 
-ALLOWED_HOSTS = ['localhost', 'django'] if os.getenv('ALLOWED_HOSTS') is None \
-    else re.split(r' *[,|:|;] *', os.getenv('ALLOWED_HOSTS'))
+ALLOWED_HOSTS = ['localhost', 'django', 'geonepal.info' ]
 
 PROXY_ALLOWED_HOSTS += ('nominatim.openstreetmap.org',)
 
