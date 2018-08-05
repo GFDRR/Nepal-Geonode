@@ -83,7 +83,7 @@ services:
       - data-dir-conf
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - /home/sujit/Desktop/var/lib/tomcat8/webapps/geoserver/data:/geoserver_data/data
+      - ../geoserver_data:/geoserver_data/data
     env_file:
       - ./scripts/docker/env/production/geoserver.env
 

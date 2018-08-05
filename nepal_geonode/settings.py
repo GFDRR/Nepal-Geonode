@@ -245,7 +245,21 @@ MAP_BASELAYERS = [{
     "visibility": False,
     "fixed": True,
     "group":"background"
-}, {
+}, 
+
+{
+    "source": {"ptype": "gxp_olsource"},
+    "type": "OpenLayers.Layer.XYZ",
+    "title": "MapTiler",
+    "args": ["MapTiler", "https://maps.tilehosting.com/data/contours/${z}/${x}/${y}.pbf?key=xrAzLtH8PhaQ96Kj4Yrg"],
+    "wrapDateLine": True,
+    "name": "background",
+    "attribution": '<a href="https://www.maptiler.com/license/maps/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>',
+    "visibility": False,
+    "fixed": True,
+    "group":"background"
+}, 
+{
     "source": {"ptype": "gxp_olsource"},
     "type": "OpenLayers.Layer.XYZ",
     "title": "UNESCO GEODATA",
