@@ -13,15 +13,15 @@ echo GEOSERVER_PUBLIC_LOCATION=$GEOSERVER_PUBLIC_LOCATION
 echo USER_NAME=$GEONODE_DATABASE_PASSWORD
 echo PASSWORD=$GEONODE_DATABASE_PASSWORD
 
-/usr/local/bin/invoke waitfordbs >> /usr/src/app/invoke.log
+/usr/local/bin/invoke waitfordbs >> /usr/src/geonode/invoke.log
 
 echo "waitfordbs task done"
 
-/usr/local/bin/invoke migrations >> /usr/src/app/invoke.log
+/usr/local/bin/invoke migrations >> /usr/src/geonode/invoke.log
 echo "migrations task done"
-/usr/local/bin/invoke prepare >> /usr/src/app/invoke.log
+/usr/local/bin/invoke prepare >> /usr/src/geonode/invoke.log
 echo "prepare task done"
-/usr/local/bin/invoke fixtures >> /usr/src/app/invoke.log
+/usr/local/bin/invoke fixtures >> /usr/src/geonode/invoke.log
 echo "fixture task done"
 
 
