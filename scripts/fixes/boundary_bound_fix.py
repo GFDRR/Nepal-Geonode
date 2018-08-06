@@ -1,5 +1,6 @@
 
 from geonode.layers.models import *
+from geonode.base.models import Link
 import re
 
 from django.db import connection
