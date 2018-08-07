@@ -1,2 +1,2 @@
-0 0 * * *	root	 /usr/src/osm-extract/osm_update.sh >> /var/log/geonode-task.log 2>&1
+15 18 * * *	root	 /usr/src/osm-extract/osm_update.sh >> /var/log/geonode-task.log 2>&1
 
