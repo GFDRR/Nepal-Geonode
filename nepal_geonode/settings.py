@@ -21,10 +21,7 @@
 # Django settings for the GeoNode project.
 import os
 # Load more settings from a file called local_settings.py if it exists
-try:
-    from geonode.local_settings import *
-except ImportError:
-    from geonode.settings import *
+from geonode.settings import *
 
 #
 # General Django development settings
@@ -39,8 +36,7 @@ LOCAL_ROOT = os.path.abspath(os.path.dirname(__file__))
 
 WSGI_APPLICATION = "{}.wsgi.application".format(PROJECT_NAME)
 
-ALLOWED_HOSTS = ['localhost', 'django'] if os.getenv('ALLOWED_HOSTS') is None \
-    else re.split(r' *[,|:|;] *', os.getenv('ALLOWED_HOSTS'))
+ALLOWED_HOSTS = ['localhost', 'django', 'geonepal.info' ]
 
 PROXY_ALLOWED_HOSTS += ('nominatim.openstreetmap.org',)
 
@@ -249,7 +245,21 @@ MAP_BASELAYERS = [{
     "visibility": False,
     "fixed": True,
     "group":"background"
-}, {
+}, 
+
+{
+    "source": {"ptype": "gxp_olsource"},
+    "type": "OpenLayers.Layer.XYZ",
+    "title": "MapTiler",
+    "args": ["MapTiler", "https://maps.tilehosting.com/data/contours/${z}/${x}/${y}.pbf?key=xrAzLtH8PhaQ96Kj4Yrg"],
+    "wrapDateLine": True,
+    "name": "background",
+    "attribution": '<a href="https://www.maptiler.com/license/maps/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>',
+    "visibility": False,
+    "fixed": True,
+    "group":"background"
+}, 
+{
     "source": {"ptype": "gxp_olsource"},
     "type": "OpenLayers.Layer.XYZ",
     "title": "UNESCO GEODATA",

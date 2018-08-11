@@ -1,0 +1,217 @@
+"name","title","abstract","catname"
+"aerodromes_polygon","Airports (polygon) (OSM latest extract)","This data is extracted from the OpenStreetMap database on a daily basis at 12:01 AM Nepal Standard Time (UTC +5:45). The data is automatically filtered into pre-selected feature categories. 
+ 
+OpenStreetMap is a worldwide open geospatial database, roughly equivalent to Wikipedia but for maps. It can be edited, checked and downloaded by anyone agreeing to abide by the terms of the Open Data Commons Open Database License (ODBl). Please note that the dataset is only as complete as the underlying OpenStreetMap database and quality across Nepal may be highly variable.
+ 
+If you feel that the feature categories miss an important subset of data or misrepresent the reality of Nepal, please write to a GeoNode admin explaining the features you’d like to see. If the proposed category appears useful and possible to create we will modify the export automation accordingly. Alternately, you can create your own custom export at export.hotosm.org.
+ 
+All data © OpenStreetMap contributors.
+","transportation"
+"banks","Banks (OSM latest extract)","This data is extracted from the OpenStreetMap database on a daily basis at 12:01 AM Nepal Standard Time (UTC +5:45). The data is automatically filtered into pre-selected feature categories. 
+ 
+OpenStreetMap is a worldwide open geospatial database, roughly equivalent to Wikipedia but for maps. It can be edited, checked and downloaded by anyone agreeing to abide by the terms of the Open Data Commons Open Database License (ODBl). Please note that the dataset is only as complete as the underlying OpenStreetMap database and quality across Nepal may be highly variable.
+ 
+If you feel that the feature categories miss an important subset of data or misrepresent the reality of Nepal, please write to a GeoNode admin explaining the features you’d like to see. If the proposed category appears useful and possible to create we will modify the export automation accordingly. Alternately, you can create your own custom export at export.hotosm.org.
+ 
+All data © OpenStreetMap contributors.
+","location"
+"main_roads","Main roads (OSM latest extract)","This data is extracted from the OpenStreetMap database on a daily basis at 12:01 AM Nepal Standard Time (UTC +5:45). The data is automatically filtered into pre-selected feature categories. 
+ 
+OpenStreetMap is a worldwide open geospatial database, roughly equivalent to Wikipedia but for maps. It can be edited, checked and downloaded by anyone agreeing to abide by the terms of the Open Data Commons Open Database License (ODBl). Please note that the dataset is only as complete as the underlying OpenStreetMap database and quality across Nepal may be highly variable.
+ 
+If you feel that the feature categories miss an important subset of data or misrepresent the reality of Nepal, please write to a GeoNode admin explaining the features you’d like to see. If the proposed category appears useful and possible to create we will modify the export automation accordingly. Alternately, you can create your own custom export at export.hotosm.org.
+ 
+All data © OpenStreetMap contributors.
+","transportation"
+"police_stations","Police stations (OSM latest extract)","This data is extracted from the OpenStreetMap database on a daily basis at 12:01 AM Nepal Standard Time (UTC +5:45). The data is automatically filtered into pre-selected feature categories. 
+ 
+OpenStreetMap is a worldwide open geospatial database, roughly equivalent to Wikipedia but for maps. It can be edited, checked and downloaded by anyone agreeing to abide by the terms of the Open Data Commons Open Database License (ODBl). Please note that the dataset is only as complete as the underlying OpenStreetMap database and quality across Nepal may be highly variable.
+ 
+If you feel that the feature categories miss an important subset of data or misrepresent the reality of Nepal, please write to a GeoNode admin explaining the features you’d like to see. If the proposed category appears useful and possible to create we will modify the export automation accordingly. Alternately, you can create your own custom export at export.hotosm.org.
+ 
+All data © OpenStreetMap contributors.
+","intelligenceMilitary"
+"tracks","Tracks (OSM latest extract)","This data is extracted from the OpenStreetMap database on a daily basis at 12:01 AM Nepal Standard Time (UTC +5:45). The data is automatically filtered into pre-selected feature categories. 
+ 
+OpenStreetMap is a worldwide open geospatial database, roughly equivalent to Wikipedia but for maps. It can be edited, checked and downloaded by anyone agreeing to abide by the terms of the Open Data Commons Open Database License (ODBl). Please note that the dataset is only as complete as the underlying OpenStreetMap database and quality across Nepal may be highly variable.
+ 
+If you feel that the feature categories miss an important subset of data or misrepresent the reality of Nepal, please write to a GeoNode admin explaining the features you’d like to see. If the proposed category appears useful and possible to create we will modify the export automation accordingly. Alternately, you can create your own custom export at export.hotosm.org.
+ 
+All data © OpenStreetMap contributors.
+","transportation"
+"villages","Villages (OSM latest extract)","This data is extracted from the OpenStreetMap database on a daily basis at 12:01 AM Nepal Standard Time (UTC +5:45). The data is automatically filtered into pre-selected feature categories. 
+ 
+OpenStreetMap is a worldwide open geospatial database, roughly equivalent to Wikipedia but for maps. It can be edited, checked and downloaded by anyone agreeing to abide by the terms of the Open Data Commons Open Database License (ODBl). Please note that the dataset is only as complete as the underlying OpenStreetMap database and quality across Nepal may be highly variable.
+ 
+If you feel that the feature categories miss an important subset of data or misrepresent the reality of Nepal, please write to a GeoNode admin explaining the features you’d like to see. If the proposed category appears useful and possible to create we will modify the export automation accordingly. Alternately, you can create your own custom export at export.hotosm.org.
+ 
+All data © OpenStreetMap contributors.
+","location"
+"helipads","Helipads (OSM latest extract)","This data is extracted from the OpenStreetMap database on a daily basis at 12:01 AM Nepal Standard Time (UTC +5:45). The data is automatically filtered into pre-selected feature categories. 
+ 
+OpenStreetMap is a worldwide open geospatial database, roughly equivalent to Wikipedia but for maps. It can be edited, checked and downloaded by anyone agreeing to abide by the terms of the Open Data Commons Open Database License (ODBl). Please note that the dataset is only as complete as the underlying OpenStreetMap database and quality across Nepal may be highly variable.
+ 
+If you feel that the feature categories miss an important subset of data or misrepresent the reality of Nepal, please write to a GeoNode admin explaining the features you’d like to see. If the proposed category appears useful and possible to create we will modify the export automation accordingly. Alternately, you can create your own custom export at export.hotosm.org.
+ 
+All data © OpenStreetMap contributors.
+","transportation"
+"residential","Residential area (OSM latest extract)","This data is extracted from the OpenStreetMap database on a daily basis at 12:01 AM Nepal Standard Time (UTC +5:45). The data is automatically filtered into pre-selected feature categories. 
+ 
+OpenStreetMap is a worldwide open geospatial database, roughly equivalent to Wikipedia but for maps. It can be edited, checked and downloaded by anyone agreeing to abide by the terms of the Open Data Commons Open Database License (ODBl). Please note that the dataset is only as complete as the underlying OpenStreetMap database and quality across Nepal may be highly variable.
+ 
+If you feel that the feature categories miss an important subset of data or misrepresent the reality of Nepal, please write to a GeoNode admin explaining the features you’d like to see. If the proposed category appears useful and possible to create we will modify the export automation accordingly. Alternately, you can create your own custom export at export.hotosm.org.
+ 
+All data © OpenStreetMap contributors.
+","location"
+"schools_point","Schools and educational facilities (point) (OSM latest extract)","This data is extracted from the OpenStreetMap database on a daily basis at 12:01 AM Nepal Standard Time (UTC +5:45). The data is automatically filtered into pre-selected feature categories. 
+ 
+OpenStreetMap is a worldwide open geospatial database, roughly equivalent to Wikipedia but for maps. It can be edited, checked and downloaded by anyone agreeing to abide by the terms of the Open Data Commons Open Database License (ODBl). Please note that the dataset is only as complete as the underlying OpenStreetMap database and quality across Nepal may be highly variable.
+ 
+If you feel that the feature categories miss an important subset of data or misrepresent the reality of Nepal, please write to a GeoNode admin explaining the features you’d like to see. If the proposed category appears useful and possible to create we will modify the export automation accordingly. Alternately, you can create your own custom export at export.hotosm.org.
+ 
+All data © OpenStreetMap contributors.
+","structure"
+"farms","Farms and farmlands (OSM latest extract)","This data is extracted from the OpenStreetMap database on a daily basis at 12:01 AM Nepal Standard Time (UTC +5:45). The data is automatically filtered into pre-selected feature categories. 
+ 
+OpenStreetMap is a worldwide open geospatial database, roughly equivalent to Wikipedia but for maps. It can be edited, checked and downloaded by anyone agreeing to abide by the terms of the Open Data Commons Open Database License (ODBl). Please note that the dataset is only as complete as the underlying OpenStreetMap database and quality across Nepal may be highly variable.
+ 
+If you feel that the feature categories miss an important subset of data or misrepresent the reality of Nepal, please write to a GeoNode admin explaining the features you’d like to see. If the proposed category appears useful and possible to create we will modify the export automation accordingly. Alternately, you can create your own custom export at export.hotosm.org.
+ 
+All data © OpenStreetMap contributors.
+","economy"
+"aerodromes_point","Airports (point) (OSM latest extract)","This data is extracted from the OpenStreetMap database on a daily basis at 12:01 AM Nepal Standard Time (UTC +5:45). The data is automatically filtered into pre-selected feature categories. 
+ 
+OpenStreetMap is a worldwide open geospatial database, roughly equivalent to Wikipedia but for maps. It can be edited, checked and downloaded by anyone agreeing to abide by the terms of the Open Data Commons Open Database License (ODBl). Please note that the dataset is only as complete as the underlying OpenStreetMap database and quality across Nepal may be highly variable.
+ 
+If you feel that the feature categories miss an important subset of data or misrepresent the reality of Nepal, please write to a GeoNode admin explaining the features you’d like to see. If the proposed category appears useful and possible to create we will modify the export automation accordingly. Alternately, you can create your own custom export at export.hotosm.org.
+ 
+All data © OpenStreetMap contributors.
+","transportation"
+"lakes","Lakes (OSM latest extract)","This data is extracted from the OpenStreetMap database on a daily basis at 12:01 AM Nepal Standard Time (UTC +5:45). The data is automatically filtered into pre-selected feature categories. 
+ 
+OpenStreetMap is a worldwide open geospatial database, roughly equivalent to Wikipedia but for maps. It can be edited, checked and downloaded by anyone agreeing to abide by the terms of the Open Data Commons Open Database License (ODBl). Please note that the dataset is only as complete as the underlying OpenStreetMap database and quality across Nepal may be highly variable.
+ 
+If you feel that the feature categories miss an important subset of data or misrepresent the reality of Nepal, please write to a GeoNode admin explaining the features you’d like to see. If the proposed category appears useful and possible to create we will modify the export automation accordingly. Alternately, you can create your own custom export at export.hotosm.org.
+ 
+All data © OpenStreetMap contributors.
+","inlandWaters"
+"neighborhoods","Neighborhoods (OSM latest extract)","This data is extracted from the OpenStreetMap database on a daily basis at 12:01 AM Nepal Standard Time (UTC +5:45). The data is automatically filtered into pre-selected feature categories. 
+ 
+OpenStreetMap is a worldwide open geospatial database, roughly equivalent to Wikipedia but for maps. It can be edited, checked and downloaded by anyone agreeing to abide by the terms of the Open Data Commons Open Database License (ODBl). Please note that the dataset is only as complete as the underlying OpenStreetMap database and quality across Nepal may be highly variable.
+ 
+If you feel that the feature categories miss an important subset of data or misrepresent the reality of Nepal, please write to a GeoNode admin explaining the features you’d like to see. If the proposed category appears useful and possible to create we will modify the export automation accordingly. Alternately, you can create your own custom export at export.hotosm.org.
+ 
+All data © OpenStreetMap contributors.
+","society"
+"medical_point","Medical facilities (point) (OSM latest extract)","This data is extracted from the OpenStreetMap database on a daily basis at 12:01 AM Nepal Standard Time (UTC +5:45). The data is automatically filtered into pre-selected feature categories. 
+ 
+OpenStreetMap is a worldwide open geospatial database, roughly equivalent to Wikipedia but for maps. It can be edited, checked and downloaded by anyone agreeing to abide by the terms of the Open Data Commons Open Database License (ODBl). Please note that the dataset is only as complete as the underlying OpenStreetMap database and quality across Nepal may be highly variable.
+ 
+If you feel that the feature categories miss an important subset of data or misrepresent the reality of Nepal, please write to a GeoNode admin explaining the features you’d like to see. If the proposed category appears useful and possible to create we will modify the export automation accordingly. Alternately, you can create your own custom export at export.hotosm.org.
+ 
+All data © OpenStreetMap contributors.
+","health"
+"medical_polygon","Medical facilities (polygon) (OSM latest extract)","This data is extracted from the OpenStreetMap database on a daily basis at 12:01 AM Nepal Standard Time (UTC +5:45). The data is automatically filtered into pre-selected feature categories. 
+ 
+OpenStreetMap is a worldwide open geospatial database, roughly equivalent to Wikipedia but for maps. It can be edited, checked and downloaded by anyone agreeing to abide by the terms of the Open Data Commons Open Database License (ODBl). Please note that the dataset is only as complete as the underlying OpenStreetMap database and quality across Nepal may be highly variable.
+ 
+If you feel that the feature categories miss an important subset of data or misrepresent the reality of Nepal, please write to a GeoNode admin explaining the features you’d like to see. If the proposed category appears useful and possible to create we will modify the export automation accordingly. Alternately, you can create your own custom export at export.hotosm.org.
+ 
+All data © OpenStreetMap contributors.
+","health"
+"hotels","Hotels (OSM latest extract)","This data is extracted from the OpenStreetMap database on a daily basis at 12:01 AM Nepal Standard Time (UTC +5:45). The data is automatically filtered into pre-selected feature categories. 
+ 
+OpenStreetMap is a worldwide open geospatial database, roughly equivalent to Wikipedia but for maps. It can be edited, checked and downloaded by anyone agreeing to abide by the terms of the Open Data Commons Open Database License (ODBl). Please note that the dataset is only as complete as the underlying OpenStreetMap database and quality across Nepal may be highly variable.
+ 
+If you feel that the feature categories miss an important subset of data or misrepresent the reality of Nepal, please write to a GeoNode admin explaining the features you’d like to see. If the proposed category appears useful and possible to create we will modify the export automation accordingly. Alternately, you can create your own custom export at export.hotosm.org.
+ 
+All data © OpenStreetMap contributors.
+","geoscientificInformation"
+"buildings","Buildings (OSM latest extract)","This data is extracted from the OpenStreetMap database on a daily basis at 12:01 AM Nepal Standard Time (UTC +5:45). The data is automatically filtered into pre-selected feature categories. 
+ 
+OpenStreetMap is a worldwide open geospatial database, roughly equivalent to Wikipedia but for maps. It can be edited, checked and downloaded by anyone agreeing to abide by the terms of the Open Data Commons Open Database License (ODBl). Please note that the dataset is only as complete as the underlying OpenStreetMap database and quality across Nepal may be highly variable.
+ 
+If you feel that the feature categories miss an important subset of data or misrepresent the reality of Nepal, please write to a GeoNode admin explaining the features you’d like to see. If the proposed category appears useful and possible to create we will modify the export automation accordingly. Alternately, you can create your own custom export at export.hotosm.org.
+ 
+All data © OpenStreetMap contributors.
+","geoscientificInformation"
+"forest","Forest (OSM latest extract)","This data is extracted from the OpenStreetMap database on a daily basis at 12:01 AM Nepal Standard Time (UTC +5:45). The data is automatically filtered into pre-selected feature categories. 
+ 
+OpenStreetMap is a worldwide open geospatial database, roughly equivalent to Wikipedia but for maps. It can be edited, checked and downloaded by anyone agreeing to abide by the terms of the Open Data Commons Open Database License (ODBl). Please note that the dataset is only as complete as the underlying OpenStreetMap database and quality across Nepal may be highly variable.
+ 
+If you feel that the feature categories miss an important subset of data or misrepresent the reality of Nepal, please write to a GeoNode admin explaining the features you’d like to see. If the proposed category appears useful and possible to create we will modify the export automation accordingly. Alternately, you can create your own custom export at export.hotosm.org.
+ 
+All data © OpenStreetMap contributors.
+","environment"
+"riverbanks","Riverbanks (OSM latest extract)","This data is extracted from the OpenStreetMap database on a daily basis at 12:01 AM Nepal Standard Time (UTC +5:45). The data is automatically filtered into pre-selected feature categories. 
+ 
+OpenStreetMap is a worldwide open geospatial database, roughly equivalent to Wikipedia but for maps. It can be edited, checked and downloaded by anyone agreeing to abide by the terms of the Open Data Commons Open Database License (ODBl). Please note that the dataset is only as complete as the underlying OpenStreetMap database and quality across Nepal may be highly variable.
+ 
+If you feel that the feature categories miss an important subset of data or misrepresent the reality of Nepal, please write to a GeoNode admin explaining the features you’d like to see. If the proposed category appears useful and possible to create we will modify the export automation accordingly. Alternately, you can create your own custom export at export.hotosm.org.
+ 
+All data © OpenStreetMap contributors.
+","inlandWaters"
+"rivers","Rivers (OSM latest extract)","This data is extracted from the OpenStreetMap database on a daily basis at 12:01 AM Nepal Standard Time (UTC +5:45). The data is automatically filtered into pre-selected feature categories. 
+ 
+OpenStreetMap is a worldwide open geospatial database, roughly equivalent to Wikipedia but for maps. It can be edited, checked and downloaded by anyone agreeing to abide by the terms of the Open Data Commons Open Database License (ODBl). Please note that the dataset is only as complete as the underlying OpenStreetMap database and quality across Nepal may be highly variable.
+ 
+If you feel that the feature categories miss an important subset of data or misrepresent the reality of Nepal, please write to a GeoNode admin explaining the features you’d like to see. If the proposed category appears useful and possible to create we will modify the export automation accordingly. Alternately, you can create your own custom export at export.hotosm.org.
+ 
+All data © OpenStreetMap contributors.
+","inlandWaters"
+"schools_polygon","Schools and educational facilities (polygon) (OSM latest extract)","This data is extracted from the OpenStreetMap database on a daily basis at 12:01 AM Nepal Standard Time (UTC +5:45). The data is automatically filtered into pre-selected feature categories. 
+ 
+OpenStreetMap is a worldwide open geospatial database, roughly equivalent to Wikipedia but for maps. It can be edited, checked and downloaded by anyone agreeing to abide by the terms of the Open Data Commons Open Database License (ODBl). Please note that the dataset is only as complete as the underlying OpenStreetMap database and quality across Nepal may be highly variable.
+ 
+If you feel that the feature categories miss an important subset of data or misrepresent the reality of Nepal, please write to a GeoNode admin explaining the features you’d like to see. If the proposed category appears useful and possible to create we will modify the export automation accordingly. Alternately, you can create your own custom export at export.hotosm.org.
+ 
+All data © OpenStreetMap contributors.
+","structure"
+"cities","Cities (OSM latest extract)","This data is extracted from the OpenStreetMap database on a daily basis at 12:01 AM Nepal Standard Time (UTC +5:45). The data is automatically filtered into pre-selected feature categories. 
+ 
+OpenStreetMap is a worldwide open geospatial database, roughly equivalent to Wikipedia but for maps. It can be edited, checked and downloaded by anyone agreeing to abide by the terms of the Open Data Commons Open Database License (ODBl). Please note that the dataset is only as complete as the underlying OpenStreetMap database and quality across Nepal may be highly variable.
+ 
+If you feel that the feature categories miss an important subset of data or misrepresent the reality of Nepal, please write to a GeoNode admin explaining the features you’d like to see. If the proposed category appears useful and possible to create we will modify the export automation accordingly. Alternately, you can create your own custom export at export.hotosm.org.
+ 
+All data © OpenStreetMap contributors.
+","society"
+"restaurants","Restaurants (OSM latest extract)","This data is extracted from the OpenStreetMap database on a daily basis at 12:01 AM Nepal Standard Time (UTC +5:45). The data is automatically filtered into pre-selected feature categories. 
+ 
+OpenStreetMap is a worldwide open geospatial database, roughly equivalent to Wikipedia but for maps. It can be edited, checked and downloaded by anyone agreeing to abide by the terms of the Open Data Commons Open Database License (ODBl). Please note that the dataset is only as complete as the underlying OpenStreetMap database and quality across Nepal may be highly variable.
+ 
+If you feel that the feature categories miss an important subset of data or misrepresent the reality of Nepal, please write to a GeoNode admin explaining the features you’d like to see. If the proposed category appears useful and possible to create we will modify the export automation accordingly. Alternately, you can create your own custom export at export.hotosm.org.
+ 
+All data © OpenStreetMap contributors.
+","location"
+"train_stations","Train stations (OSM latest extract)","This data is extracted from the OpenStreetMap database on a daily basis at 12:01 AM Nepal Standard Time (UTC +5:45). The data is automatically filtered into pre-selected feature categories. 
+ 
+OpenStreetMap is a worldwide open geospatial database, roughly equivalent to Wikipedia but for maps. It can be edited, checked and downloaded by anyone agreeing to abide by the terms of the Open Data Commons Open Database License (ODBl). Please note that the dataset is only as complete as the underlying OpenStreetMap database and quality across Nepal may be highly variable.
+ 
+If you feel that the feature categories miss an important subset of data or misrepresent the reality of Nepal, please write to a GeoNode admin explaining the features you’d like to see. If the proposed category appears useful and possible to create we will modify the export automation accordingly. Alternately, you can create your own custom export at export.hotosm.org.
+ 
+All data © OpenStreetMap contributors.
+","transportation"
+"all_roads","All roads (OSM latest extract)","This data is extracted from the OpenStreetMap database on a daily basis at 12:01 AM Nepal Standard Time (UTC +5:45). The data is automatically filtered into pre-selected feature categories. 
+ 
+OpenStreetMap is a worldwide open geospatial database, roughly equivalent to Wikipedia but for maps. It can be edited, checked and downloaded by anyone agreeing to abide by the terms of the Open Data Commons Open Database License (ODBl). Please note that the dataset is only as complete as the underlying OpenStreetMap database and quality across Nepal may be highly variable.
+ 
+If you feel that the feature categories miss an important subset of data or misrepresent the reality of Nepal, please write to a GeoNode admin explaining the features you’d like to see. If the proposed category appears useful and possible to create we will modify the export automation accordingly. Alternately, you can create your own custom export at export.hotosm.org.
+ 
+All data © OpenStreetMap contributors.
+","transportation"
+"hamlets","Hamlets (OSM latest extract)","This data is extracted from the OpenStreetMap database on a daily basis at 12:01 AM Nepal Standard Time (UTC +5:45). The data is automatically filtered into pre-selected feature categories. 
+ 
+OpenStreetMap is a worldwide open geospatial database, roughly equivalent to Wikipedia but for maps. It can be edited, checked and downloaded by anyone agreeing to abide by the terms of the Open Data Commons Open Database License (ODBl). Please note that the dataset is only as complete as the underlying OpenStreetMap database and quality across Nepal may be highly variable.
+ 
+If you feel that the feature categories miss an important subset of data or misrepresent the reality of Nepal, please write to a GeoNode admin explaining the features you’d like to see. If the proposed category appears useful and possible to create we will modify the export automation accordingly. Alternately, you can create your own custom export at export.hotosm.org.
+ 
+All data © OpenStreetMap contributors.
+","society"
+"grassland","Grassland (OSM latest extract)","This data is extracted from the OpenStreetMap database on a daily basis at 12:01 AM Nepal Standard Time (UTC +5:45). The data is automatically filtered into pre-selected feature categories. 
+ 
+OpenStreetMap is a worldwide open geospatial database, roughly equivalent to Wikipedia but for maps. It can be edited, checked and downloaded by anyone agreeing to abide by the terms of the Open Data Commons Open Database License (ODBl). Please note that the dataset is only as complete as the underlying OpenStreetMap database and quality across Nepal may be highly variable.
+ 
+If you feel that the feature categories miss an important subset of data or misrepresent the reality of Nepal, please write to a GeoNode admin explaining the features you’d like to see. If the proposed category appears useful and possible to create we will modify the export automation accordingly. Alternately, you can create your own custom export at export.hotosm.org.
+ 
+All data © OpenStreetMap contributors.
+","environment"

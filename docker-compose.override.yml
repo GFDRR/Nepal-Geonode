@@ -1,0 +1,24 @@
+version: '3.6'
+
+services:
+  django:
+    build: 
+      context: .
+      dockerfile: ./compose/production/django/Dockerfile
+    # Loading the app is defined here to allow for
+    # autoreload on changes it is mounted on top of the
+    # old copy that docker added when creating the image
+    volumes:
+      - '.:/usr/src/geonode'
+    environment:
+      - DEBUG=True
+
+  # celery:
+  #   build: .
+  #   # Loading the app is defined here to allow for
+  #   # autoreload on changes it is mounted on top of the
+  #   # old copy that docker added when creating the image
+  #   volumes:
+  #     - '.:/usr/src/app'
+  #   environment:
+  #     - DEBUG=True
