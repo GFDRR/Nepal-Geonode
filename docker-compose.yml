@@ -103,6 +103,7 @@ services:
     # command: paver start_django -b 0.0.0.0:8000
     command: uwsgi --ini uwsgi.ini
     volumes:
+      - /home/geosolutions/docker_uploads:/usr/uploads
       - /var/run/docker.sock:/var/run/docker.sock
       - geoserver-data-dir:/geoserver_data/data
       - ../osm-extract:/usr/src/osm-extract
