@@ -71,3 +71,4 @@ ansible/*
 celerybeat-schedule.*
 GeoLiteCity.dat
 nepal_geonode.egg-info/
+geonode/

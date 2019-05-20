@@ -75,6 +75,8 @@ RUN sed -i 's/"srid": resource.srid/"srid": resource.projection,/g' /usr/local/l
 
 COPY ./compose/production/django/helpers.py /usr/local/lib/python2.7/site-packages/geonode/geoserver/helpers.py
 
+COPY ./compose/production/django/views.py /usr/local/lib/python2.7/site-packages/geonode/layers/views.py
+
 EXPOSE 8000
 
 ENTRYPOINT ["/usr/src/app/entrypoint.sh"]
