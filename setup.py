@@ -45,7 +45,7 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        'Django==1.8.19',
+        'Django==2.2.24',
         'six==1.10.0',
         'django-cuser==2017.3.16',
         'django-model-utils==3.1.1',
