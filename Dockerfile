@@ -26,6 +26,7 @@ RUN apt-get update && apt-get install -y \
     python3-pip python3-pil python3-lxml python3-pylibmc \
     uwsgi uwsgi-plugin-python3 \
     osmosis \
+    gdal-bin \
     firefox-esr \
     --no-install-recommends && rm -rf /var/lib/apt/lists/*
 
