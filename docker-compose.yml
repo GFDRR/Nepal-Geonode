@@ -14,6 +14,7 @@ x-common-django:
   volumes:
     # - '.:/usr/src/geonode'
     - ../osm-extract:/usr/src/osm-extract
+    - ../osmosis:/usr/src/osmosis
     - statics:/mnt/volumes/statics
     - geoserver-data-dir:/geoserver_data/data
     - backup-restore:/backup_restore
