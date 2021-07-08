@@ -13,6 +13,7 @@ x-common-django:
     - .env_test
   volumes:
     # - '.:/usr/src/geonode'
+    # - ../osm-extract:/usr/src/osm-extract
     - statics:/mnt/volumes/statics
     - geoserver-data-dir:/geoserver_data/data
     - backup-restore:/backup_restore

@@ -25,6 +25,7 @@ RUN apt-get update && apt-get install -y \
     python3-dev python3-gdal python3-psycopg2 python3-ldap \
     python3-pip python3-pil python3-lxml python3-pylibmc \
     uwsgi uwsgi-plugin-python3 \
+    osmosis \
     firefox-esr \
     --no-install-recommends && rm -rf /var/lib/apt/lists/*
 
