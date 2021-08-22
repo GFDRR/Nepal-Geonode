@@ -64,7 +64,7 @@ services:
       - "${HTTPS_PORT}:443"
     volumes:
       - nginx-confd:/etc/nginx
-      - nginx-certificates:/spcgeonode-certificates
+      - nginx-certificates:/geonode-certificates
       - statics:/mnt/volumes/statics
     restart: on-failure
 
@@ -79,7 +79,7 @@ services:
       - ADMIN_EMAIL=${ADMIN_EMAIL}
       - LETSENCRYPT_MODE=${LETSENCRYPT_MODE}
     volumes:
-      - nginx-certificates:/spcgeonode-certificates
+      - nginx-certificates:/geonode-certificates
     restart: on-failure
 
   # Geoserver backend
