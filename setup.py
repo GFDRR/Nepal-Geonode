@@ -51,7 +51,7 @@ setup(
         'django-model-utils==3.1.1',
         'django-autocomplete-light==2.3.3',
         'pyshp==1.2.12',
-        'celery==4.1.0',
+        'celery==5.2.2',
         'Shapely>=1.5.13,<1.6.dev0',
         'OWSLib==0.15.0',
         'proj==0.1.0',
